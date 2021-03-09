@@ -20,6 +20,7 @@ const containerVariants = {
       when: "beforeChildren",
     },
   },
+  exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 const Order = ({ pizza }) => {
@@ -35,6 +36,7 @@ const Order = ({ pizza }) => {
       animate="animate"
       variants={containerVariants}
       className="container order"
+      exit="exit"
     >
       {/* whne removed from dom. framer looks at the exit animation and applies it. */}
       <AnimatePresence>
