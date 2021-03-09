@@ -14,6 +14,9 @@ const Toppings = ({ addTopping, pizza }) => {
 
   return (
     <div className="toppings container">
+      <Link to="/order">
+        <button>Order</button>
+      </Link>
       <h3>Step 2: Choose Toppings</h3>
       <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         {toppings.map((topping) => {
@@ -30,10 +33,6 @@ const Toppings = ({ addTopping, pizza }) => {
           );
         })}
       </motion.ul>
-
-      <Link to="/order">
-        <button>Order</button>
-      </Link>
     </div>
   );
 };
